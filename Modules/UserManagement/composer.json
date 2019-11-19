@@ -1,0 +1,25 @@
+{
+    "name": "oschool/user_management",
+    "description": "",
+    "authors": [
+        {
+            "name": "MR Vahed",
+            "email": "vahed.mrv@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\UserManagement\\Providers\\UserManagementServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\UserManagement\\": ""
+        }
+    }
+}
