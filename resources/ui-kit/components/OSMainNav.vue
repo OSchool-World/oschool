@@ -42,13 +42,24 @@
                     <li v-for="item_l3 in selected_item_l2.sub_list">
                         <div :class="{item: true, collapsed_nav: is_collapsed}">{{ item_l3.title }}</div>
                         <ul class="l4">
-                            <li v-for="item_l4 in item_l3.sub_list">
-                                <div class="item">
-                                    <!-- <span class="icon">{{ item_l4.icon }}</span> -->
-                                    <span class="icon"><i :class="item_l4.icon ? item_l4.icon : 'document'"></i></span>
-                                    <span class="title">{{ item_l4.title }}</span>
-                                </div>
-                            </li>
+
+                            <template v-for="item_l4 in item_l3.sub_list">
+                                <router-link v-if="item_l4.route" :to="{name: item_l4.route}" tag="li">
+                                    <div class="item">
+                                        <!-- <span class="icon">{{ item_l4.icon }}</span> -->
+                                        <span class="icon"><i :class="item_l4.icon ? item_l4.icon : 'document'"></i></span>
+                                        <span class="title">{{ item_l4.title }}</span>
+                                    </div>
+                                </router-link>
+
+                                <li v-else>
+                                    <div class="item">
+                                        <!-- <span class="icon">{{ item_l4.icon }}</span> -->
+                                        <span class="icon"><i :class="item_l4.icon ? item_l4.icon : 'document'"></i></span>
+                                        <span class="title">{{ item_l4.title }}</span>
+                                    </div>
+                                </li>
+                            </template>
                         </ul>
                     </li>
                 </ul>

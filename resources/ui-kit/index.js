@@ -18,6 +18,8 @@ import OSStepPage from "./components/OSStepPage";
 import OSNotification from "./components/OSNotification";
 import OSDropdown from "./components/OSDropdown";
 import OSDatagrid from "./components/OSDatagrid";
+import OSPage from "./components/OSPage";
+import OSSection from "./components/OSSection";
 
 let OSchoolUIKit = {
     install: function (Vue, option) {
@@ -38,6 +40,8 @@ let OSchoolUIKit = {
         Vue.component('os-notification', OSNotification);
         Vue.component('os-dropdown', OSDropdown);
         Vue.component('os-datagrid', OSDatagrid);
+        Vue.component('os-page', OSPage);
+        Vue.component('os-section', OSSection);
     }
 };
 

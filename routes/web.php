@@ -14,3 +14,7 @@
 Route::get('/ui-kit-overview', function () {
     return view('oschool-ui-kit-overview');
 })->name('ui-kit-overview');
+
+Route::get('/', function () {
+    return view('main-dashboard.index');
+})->name('main-dashboard');

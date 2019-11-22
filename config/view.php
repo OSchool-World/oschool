@@ -16,6 +16,7 @@ return [
     'paths' => [
         resource_path('views'),
         resource_path('ui-kit'),
+        resource_path('dashboards'),
     ],
 
     /*
