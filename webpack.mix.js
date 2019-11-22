@@ -11,5 +11,8 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+mix.sass('resources/ui-kit/sass/styles.scss', 'public/css/oschool-ui-kit.css')
+    .js('resources/ui-kit/oschool-ui-kit-overview.js', 'public/js')
+    .sass('resources/ui-kit/sass/oschool-icons.scss', 'public/css/oschool-icons.css');
+
+// mix.copy('node_modules/bootstrap/dist/css/bootstrap-grid.css', 'public/css/bootstrap');

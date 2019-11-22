@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'oschool-icons';
+    src: url("/fonts/oschool-icons.otf");
+}
+
+i {
+    font-family: 'oschool-icons';
+    font-style: normal;
+    // font-size: 24px;
+
+    &.calendar::before {
+        content: '\f020';
+    }
+
+    &.clock::before {
+        content: '\f021';
+    }
+
+    &.down-arrow::before {
+        content: '\f022';
+    }
+
+    &.up-arrow::before {
+        content: '\f023';
+    }
+
+    &.right-arrow::before {
+        content: '\f024';
+    }
+    
+    &.left-arrow::before {
+        content: '\f025';
+    }
+
+    &.right-arrow2::before {
+        content: '\f028';
+    }
+    
+    &.left-arrow2::before {
+        content: '\f029';
+    }
+
+    &.right-arrow3::before {
+        content: '\f026';
+    }
+    
+    &.left-arrow3::before {
+        content: '\f027';
+    }
+
+    &.int::before {
+        content: '\f02a';
+    }
+
+    &.float::before {
+        content: '\f02b';
+    }
+
+    &.check::before {
+        content: '\f02c';
+    }
+
+    &.password::before {
+        content: '\f02d';
+    }
+
+    &.delete::before {
+        content: '\f02e';
+    }
+
+    &.edit::before {
+        content: '\f02f';
+    }
+
+    &.educational::before {
+        content: '\f030';
+    }
+    
+    &.official::before {
+        content: '\f031';
+    }
+    
+    &.cultural::before {
+        content: '\f032';
+    }
+    
+    &.communication::before {
+        content: '\f033';
+    }
+    
+    &.services::before {
+        content: '\f034';
+    }
+    
+    &.human_resource::before {
+        content: '\f035';
+    }
+    
+    &.substructure::before {
+        content: '\f036';
+    }
+
+    &.document::before {
+        content: '\f037';
+    }
+
+    &.more::before {
+        content: '\f038';
+    }
+}

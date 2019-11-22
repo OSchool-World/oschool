@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OSchool UI Kit Overview</title>
+    <link rel="stylesheet" href="/css/oschool-ui-kit.css">
+    <link rel="stylesheet" href="/css/oschool-icons.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap-grid.css">
+</head>
+<body>
+    <div id="app">
+
+        <os-main-nav @expand="is_collapsed_nav = false" @collapse="is_collapsed_nav = true" :items="nav_items"></os-main-nav>
+
+        <os-notification :notifications="NotificationManager.notifications"></os-notification>
+
+        <header :class="{collapsed_nav: is_collapsed_nav}">
+            <div class="btns">
+                <i class="calendar"></i>
+                <i class="clock"></i>
+            </div>
+
+            <os-dropdown class="profile" :items="[{icon: 'calendar', title: 'ویرایش پروفایل', callback: null},{icon: 'clock', title: 'خروج', callback: null}]">
+                <div class="info">
+                    <div class="name">محمد رضا واحد</div>
+                    <div class="more">پروفایل &#9662</div>
+                </div>
+                <img src="images/profile.png" alt="Profile">
+            </os-dropdown>
+        </header>
+
+        <main :class="{collapsed_nav: is_collapsed_nav}">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-9">
+                        <section>
+                            <os-datagrid :data="students" :columns="students_table_columns" :row-dropdown-items="students_table_row_dropdown_items"></os-datagrid>
+                        </section>
+
+                        <section>
+                            <div class="row">
+                                <div class="col-4">
+                                    <os-input type="text" label="نام و نام خانوادگی"></os-input>
+
+                                    <os-input type="int" label="قد" unit="سانتی‌متر"></os-input>
+
+                                    <os-input type="float" label="نمره"></os-input>
+
+                                    <os-input type="password" label="رمز عبور"></os-input>
+
+                                    <os-time label="ساعت برگزاری امتحان"></os-time>
+
+                                    <os-date label="تاریخ تولد"></os-date>
+
+                                    <os-textarea label="توضیحات"></os-textarea>
+
+                                    <os-checkbox label="با قوانین یاد شده موافقت می نمایم."></os-checkbox>
+
+                                    <os-radio label="قبلا ثبت نام کرده ام"></os-radio>
+
+                                    <os-dropdown :items="[{icon: 'calendar', title: 'item1', callback: null},{icon: 'clock', title: 'item2', callback: null}]">
+                                        dropdown
+                                    </os-dropdown>
+
+                                </div>
+
+                                <div class="col-4">
+                                    <os-select label="گروه‌" :items="grade_groups" text="text"></os-select>
+
+                                    <os-select multiple label="‌گروه‌ها‌" :items="grade_groups" text="text"></os-select>
+
+                                    <os-listbox label="پایه مورد نظر" :items="grades" text="text"></os-listbox>
+
+                                    <os-listbox multiple label="پایه‌های مورد نظر" :items="grades" text="text"></os-listbox>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="col-5">
+                                        <br>
+                                        <button class="os-btn blue">تایید</button>
+                                        <br>
+                                        <button class="os-btn red">تایید</button>
+                                        <br>
+                                        <button class="os-btn green">تایید</button>
+                                        <br>
+                                        <button class="os-btn orange">تایید</button>
+                                        <br>
+                                        <button class="os-btn grey">تایید</button>
+                                        <br>
+                                        <button class="os-btn white" @click="NotificationManager.notify('با موفقیت افزوده شد', 'normal')">نوتیف</button>
+                                    </div>
+                                    <div class="col-5">
+                                        <br>
+                                        <button class="os-btn blue small">تایید</button>
+                                        <br>
+                                        <button class="os-btn red small">تایید</button>
+                                        <br>
+                                        <button class="os-btn green small">تایید</button>
+                                        <br>
+                                        <button class="os-btn orange small">تایید</button>
+                                        <br>
+                                        <button class="os-btn grey small">تایید</button>
+                                        <br>
+                                        <button class="os-btn white small">تایید</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="row">
+                                <os-tab class="col-12">
+                                    <os-tab-page name="کاربران">
+                                        tab1 content
+                                        <br><br><br><br><br><br><br><br>
+                                    </os-tab-page>
+
+                                    <os-tab-page name="دسترسی‌ها">
+                                        tab2 content
+                                        <br><br><br><br><br><br><br><br>
+                                    </os-tab-page>
+
+                                    <os-tab-page name="گروه‌بندی">
+                                        tab3 content
+                                        <br><br><br><br><br><br><br><br>
+                                    </os-tab-page>
+                                </os-tab>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="row">
+                                <os-step class="col-12" :step="2" mode="horizental">
+                                    <os-step-page name="اطلاعات دانش‌آموز">
+                                        page1
+                                    </os-step-page>
+
+                                    <os-step-page name="مشخصات کاربری">
+                                        page2
+                                    </os-step-page>
+
+                                    <os-step-page name="چاپ کارت دانش‌آموزی">
+                                        page3
+                                    </os-step-page>
+
+                                    <os-step-page name="تکمیل فرآیند">
+                                        page4
+                                    </os-step-page>
+                                </os-step>
+                            </div>
+
+                            <br><br>
+
+                            <div class="row">
+                                <os-step class="col-12" :step="2">
+                                    <os-step-page name="اطلاعات دانش‌آموز">
+                                        page1
+                                    </os-step-page>
+
+                                    <os-step-page name="مشخصات کاربری">
+                                        page2
+                                    </os-step-page>
+
+                                    <os-step-page name="تکمیل فرآیند">
+                                        page3
+                                    </os-step-page>
+                                </os-step>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="col-3">
+                        <section>
+                            <button class="os-btn blue col-12">افزودن دانش‌آموز</button>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="/js/oschool-ui-kit-overview.js"></script>
+</body>
+</html>

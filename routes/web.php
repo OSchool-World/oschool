@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/ui-kit-overview', function () {
+    return view('oschool-ui-kit-overview');
+})->name('ui-kit-overview');
