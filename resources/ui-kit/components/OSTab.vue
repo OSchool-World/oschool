@@ -3,7 +3,7 @@
         <div class="tab-btns">
             <ul>
                 <li v-for="(tab, index) in tabs" @click="selectTab(tab)" :class="{active: tab == activeTab}">
-                    {{ tab.name ? tab.name : 'tab' + (index+1) }}
+                    {{ tab.title ? tab.title : 'tab' + (index+1) }}
                 </li>
             </ul>
         </div>
@@ -34,7 +34,7 @@
         watch: {
             activeTab: function () {
                 this.tabs.forEach(tab => {
-                    tab.isActive = (this.activeTab.name == tab.name);
+                    tab.isActive = (this.activeTab.title == tab.title);
                 });
             }
         },

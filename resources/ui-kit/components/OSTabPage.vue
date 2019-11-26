@@ -8,7 +8,7 @@
     export default {
         name: "OSTabPage",
         props: {
-            name: {
+            title: {
                 type: String,
                 required: true
             }
