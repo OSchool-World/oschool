@@ -8,7 +8,7 @@
     export default {
         name: "OSStepPage",
         props: {
-            name: {
+            title: {
                 type: String
             }
         },

@@ -953,6 +953,7 @@ div.os-step {
             vertical-align: middle;
             color: $component-color;
             font-size: 12px;
+            margin-right: 3px;
 
             &.active {
                 color: $text-color;
@@ -998,8 +999,10 @@ div.os-step {
                 position: absolute;
                 right: -50px;
                 left: -50px;
+                top: 46px;
                 font-size: 10px;
                 text-align: center;
+                margin-right: unset;
             }
         }
 
