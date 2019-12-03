@@ -14,7 +14,7 @@ class CreateUserManagementContentOfPhysicalCapabilitiesTable extends Migration
     public function up()
     {
         Schema::create('user_management__content_of_physical_capabilities', function (Blueprint $table) {
-            $table->bigIncrements('id')->primary();
+            $table->bigIncrements('id');
             $table->char('system_physical_capability_id', 8);
             $table->char('system_content_capability_id', 8);
             $table->timestamps();

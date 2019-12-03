@@ -19,7 +19,7 @@ class CreateUserManagementSystemPhysicalCapabilitiesTable extends Migration
             $table->string('name');
             $table->string('title')->nullable();
             $table->string('description', 512)->nullable();
-            $table->integer('sort_order', 512)->nullable();
+            $table->integer('sort_order')->nullable();
             $table->timestamps();
         });
     }
