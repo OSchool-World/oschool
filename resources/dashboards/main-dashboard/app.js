@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import axios from 'axios';
-import OSchoolUIKit from "../../ui-kit/index";
+import OSchoolUIKit from '../../ui-kit/index';
 
 Vue.use(OSchoolUIKit);
 Vue.use(VueRouter);
@@ -9,6 +9,7 @@ Vue.use(VueRouter);
 
 import routes from './routes';
 import NavigationItems from "./nav-items";
+import LanguageManager from './Tools/LanguageManager';
 
 //=====================================================
 
@@ -17,11 +18,13 @@ const router = new VueRouter({
     routes: routes
 });
 
-const oschool = new Vue({
+const app = new Vue({
     el: "#app",
     router: router,
     data: {
         navigationItems: NavigationItems,
+        LanguageManager: LanguageManager,
+
         is_collapsed_nav: false,
     },
     methods: {

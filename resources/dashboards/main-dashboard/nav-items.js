@@ -317,6 +317,7 @@ export default [
                             {
                                 "title": "افزودن کاربر جدید",
                                 "icon": "",
+                                "route": "user_management.user_wizard",
                             },
                         ]
                     },

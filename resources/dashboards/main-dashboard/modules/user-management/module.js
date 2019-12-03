@@ -1,7 +1,7 @@
 import PUsers from './pages/Users';
-let PEditUser = null;
+import PUserWizard from './pages/UserWizard';
 
 export default {
     PUsers,
-    PEditUser
+    PUserWizard
 }

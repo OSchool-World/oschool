@@ -13,7 +13,15 @@ let routes = [
         name: 'user_management.users',
         component: UserManagement.PUsers,
     },
-
+    {
+        path: '/users/wizard',
+        name: 'user_management.user_wizard',
+        component: UserManagement.PUserWizard,
+    },
+    {
+        path: '*',
+        redirect: { name: 'not_found' }
+    }
 
 ];
 
