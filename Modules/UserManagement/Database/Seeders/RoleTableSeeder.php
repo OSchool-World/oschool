@@ -4,8 +4,9 @@ namespace Modules\UserManagement\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use Modules\UserManagement\Entities\Role;
 
-class UserManagementDatabaseSeeder extends Seeder
+class RoleTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,8 +17,8 @@ class UserManagementDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $this->call(UserTableSeeder::class);
-        $this->call(UserTypeTableSeeder::class);
-        $this->call(RoleTableSeeder::class);
+//        $role = Role::create([
+//
+//        ]);
     }
 }
