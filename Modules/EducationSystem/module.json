@@ -1,0 +1,13 @@
+{
+    "name": "EducationSystem",
+    "alias": "educationsystem",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\EducationSystem\\Providers\\EducationSystemServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

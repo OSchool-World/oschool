@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/educationsystem",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\EducationSystem\\Providers\\EducationSystemServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\EducationSystem\\": ""
+        }
+    }
+}
