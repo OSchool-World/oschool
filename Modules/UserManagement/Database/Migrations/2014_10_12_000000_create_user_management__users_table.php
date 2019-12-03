@@ -14,13 +14,16 @@ class CreateUserManagementUsersTable extends Migration
     public function up()
     {
         Schema::create('user_management__users', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->char('id', 8)->primary();
             $table->string('name');
+            $table->string('username')->unique();
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('is_locked')->default(false);
+            $table->boolean('change_password_at_first_login')->default(false);
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
