@@ -4,7 +4,7 @@ namespace $NAMESPACE$;
 
 use Illuminate\Database\Eloquent\Model;
 
-class $CLASS$ extends OSModel
+class $CLASS$ extends Model
 {
     protected $table = '$TABLE$';
 }
