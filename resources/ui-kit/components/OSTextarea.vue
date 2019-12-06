@@ -2,7 +2,7 @@
     <div :class="['os-textarea', {focus: is_focused}]">
         <label>{{ label }}</label>
         <div class="input" :style="{width: width}">
-            <textarea :placeholder="label" rows="6" @focus="onFocus" @blur="onBlur"></textarea>
+            <textarea :placeholder="label" rows="6" @focus="onFocus" @blur="onBlur" @input="$emit('input', $event.target.value)" :value="value"></textarea>
         </div>
     </div>
 </template>
@@ -17,6 +17,10 @@
             label: {
                 type: String,
             },
+            value: {
+                type: String,
+                default: null
+            }
         },
         data() {
             return {

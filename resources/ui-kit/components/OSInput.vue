@@ -3,7 +3,7 @@
         <label>{{ label }}</label>
         <div class="input" :style="{width: width}">
             <span v-if="show_icon" class="icon"><i :class="[symbol_name]"></i></span>
-            <input @keypress="onKeypress" :type="html_input_type" :placeholder="label" @focus="onFocus" @blur="onBlur">
+            <input @keypress="onKeypress" :type="html_input_type" :placeholder="label" @focus="onFocus" @blur="onBlur" @input="$emit('input', $event.target.value)" :value="value">
             <span class="unit" v-if="show_unit">{{ unit }}</span>
         </div>
     </div>
@@ -25,6 +25,10 @@
             type: {
                 type: String,
                 default: 'text'
+            },
+            value: {
+                type: String,
+                default: null
             }
         },
         data() {
@@ -55,7 +59,7 @@
                         return false;
                     }
                 }
-            }
+            },
         },
         created: function() {
             switch (this.type) {
