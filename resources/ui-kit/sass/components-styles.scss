@@ -124,11 +124,11 @@ div.os-input {
                 color: $component-color;
                 opacity: 1; /* Firefox */
             }
-              
+
             &:-ms-input-placeholder { /* Internet Explorer 10-11 */
                color: $component-color;
             }
-              
+
             &::-ms-input-placeholder { /* Microsoft Edge */
                 color: $component-color;
             }
@@ -367,13 +367,13 @@ div.os-input {
                             &:hover {
                                 background-color: unset;
                             }
-    
+
                             &.active {
                                 background-color: unset;
                                 color: unset;
                             }
                         }
-    
+
                         .os-checkbox {
                             padding: 0;
                         }
@@ -423,11 +423,11 @@ div.os-textarea {
                 color: $component-color;
                 opacity: 1; /* Firefox */
             }
-              
+
             &:-ms-input-placeholder { /* Internet Explorer 10-11 */
                color: $component-color;
             }
-              
+
             &::-ms-input-placeholder { /* Microsoft Edge */
                 color: $component-color;
             }
@@ -578,6 +578,7 @@ button.os-btn {
     background-color: $primary-color;
     color: white;
     cursor: pointer;
+    margin: 10px 0;
 
     &:focus {
         outline: none;
@@ -656,7 +657,7 @@ nav {
         div.text {
             vertical-align: middle;
             display: inline-block;
-            
+
             .brand-fa {
                 color: $brand-blue;
             }
@@ -723,7 +724,7 @@ nav {
                 .back-btn {
                     display: inline-block;
                     cursor: pointer;
-                    
+
                     i {
                         vertical-align: middle;
                         font-size: 28px;
@@ -770,7 +771,7 @@ nav {
                         width: 30px;
                         text-align: center;
                         vertical-align: middle;
-                        
+
                         i {
                             font-size: 36px;
                         }
@@ -788,7 +789,7 @@ nav {
                         font-size: 14px;
                     }
                 }
-            
+
                 ul.l2 {
                     list-style: none;
                     font-size: 12px;
@@ -810,7 +811,7 @@ nav {
                             width: 30px;
                             text-align: center;
                             font-size: 16px;
-                            line-height: 12px;                
+                            line-height: 12px;
                         }
 
                         > .title {
@@ -855,7 +856,7 @@ nav {
                             &:hover {
                                 background-color: $grey1;
                             }
-        
+
                             > .icon {
                                 display: inline-block;
                                 width: 30px;
@@ -867,7 +868,7 @@ nav {
                                     font-size: 20px;
                                 }
                             }
-        
+
                             > .title {
                                 font-size: 12px;
                                 margin-right: 6px;
@@ -989,12 +990,12 @@ div.os-step {
             vertical-align: top;
             word-spacing: normal;
             position: relative;
-            
+
 
             div.circle {
-                
+
             }
-    
+
             div.title {
                 position: absolute;
                 right: -50px;
@@ -1140,12 +1141,12 @@ div.os-dropdown {
         ul {
             list-style: none;
             margin: 0;
-            padding: 0; 
+            padding: 0;
 
             li {
                 padding: 0 10px;
                 cursor: pointer;
-                
+
 
                 &:hover {
                     background-color: $grey1;
@@ -1163,7 +1164,7 @@ div.os-dropdown {
                     font-size: 20px;
                     vertical-align: middle;
                 }
-                
+
                 .title {
                     display: inline-block;
                     font-size: $input-font-size;
