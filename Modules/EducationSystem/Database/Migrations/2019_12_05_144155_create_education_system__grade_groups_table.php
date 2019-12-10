@@ -15,6 +15,7 @@ class CreateEducationSystemGradeGroupsTable extends Migration
     {
         Schema::create('education_system__grade_groups', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('education_system_id');
             $table->string('title');
             $table->timestamps();
         });
