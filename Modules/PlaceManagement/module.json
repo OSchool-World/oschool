@@ -1,0 +1,13 @@
+{
+    "name": "PlaceManagement",
+    "alias": "place_management",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\PlaceManagement\\Providers\\PlaceManagementServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

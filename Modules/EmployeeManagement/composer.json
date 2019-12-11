@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/employeemanagement",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\EmployeeManagement\\Providers\\EmployeeManagementServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\EmployeeManagement\\": ""
+        }
+    }
+}

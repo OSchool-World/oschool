@@ -1,0 +1,13 @@
+{
+    "name": "StudentManagement",
+    "alias": "student_management",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\StudentManagement\\Providers\\StudentManagementServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
