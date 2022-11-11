@@ -1,6 +1,6 @@
 <template>
     <os-page>
-        <os-section class="col-12">
+        <os-section class="col-12" caption="افزودن کاربر جدید">
             <os-step :step="step">
                 <os-step-page title="مشخصات کاربری" class="col-4">
                     <os-input label="نام"></os-input>

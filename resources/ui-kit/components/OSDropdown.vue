@@ -21,6 +21,9 @@
             items: {
                 type: Array,
                 required: true,
+            },
+            callback_args: {
+                type: Object,
             }
         },
         data() {
@@ -39,7 +42,7 @@
                 this.is_open_menu = false;
 
                 if(item.callback)
-                    item.callback();
+                    item.callback(this.callback_args);
             }
         }
     }

@@ -1,6 +1,3 @@
 {
-    "/js/main-dashboard.js": "/js/main-dashboard.js",
-    "/css/oschool-ui-kit.css": "/css/oschool-ui-kit.css",
-    "/css/oschool-icons.css": "/css/oschool-icons.css",
-    "/js/oschool-ui-kit-overview.js": "/js/oschool-ui-kit-overview.js"
+    "/js/main-dashboard.js": "/js/main-dashboard.js"
 }

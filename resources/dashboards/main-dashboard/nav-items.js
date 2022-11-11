@@ -285,14 +285,17 @@ export default [
                             {
                                 "title": "نظام‌های آموزشی",
                                 "icon": "",
+                                "route": "education_system.education_systems"
                             },
                             {
                                 "title": "سال‌های تحصیلی",
                                 "icon": "",
+                                "route": 'education_system.academic_years'
                             },
                             {
                                 "title": "شعب موسسه",
                                 "icon": "",
+                                "route": 'education_system.branches'
                             },
                         ]
                     },

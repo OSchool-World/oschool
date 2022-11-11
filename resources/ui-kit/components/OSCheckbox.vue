@@ -1,8 +1,7 @@
 <template>
     <div :class="['os-checkbox', {focus: is_focused}]">
-        <div class="checkbox" @click="click"><i class="check" v-if="checkbox_input"></i></div>
+        <div class="checkbox" @click="click"><i class="check" v-if="is_checked"></i></div>
         <label>{{ label }}</label>
-        <input type="checkbox" v-model="checkbox_input">
     </div>
 </template>
 
@@ -16,16 +15,43 @@
             label: {
                 type: String,
             },
+            checked: {
+                type: [Boolean, Array],
+                default: false
+            },
+            value: {
+
+            }
+        },
+        model: {
+            prop: 'checked',
+            event: 'change',
         },
         data() {
             return {
                 is_focused: false,
-                checkbox_input: false,
+            }
+        },
+        computed: {
+            is_checked() {
+                if(typeof this.checked === 'boolean')
+                    return this.checked;
+                else if(Array.isArray(this.checked))
+                    return this.checked.find((el) => el == this.value) == undefined ? false : true;
             }
         },
         methods: {
             click: function () {
-                this.checkbox_input = !this.checkbox_input;
+                let new_val = !this.is_checked;
+
+                if(typeof this.checked === 'boolean') {
+                    this.$emit('change', new_val);
+                } else if(Array.isArray(this.checked)) {
+                    if(new_val)
+                        this.$emit('change', this.checked.concat([this.value]));
+                    else
+                        this.$emit('change', this.checked.filter((item) => item != this.value));
+                }
             }
         },
     }

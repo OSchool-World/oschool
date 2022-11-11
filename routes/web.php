@@ -18,3 +18,9 @@ Route::get('/ui-kit-overview', function () {
 Route::get('/', function () {
     return view('main-dashboard.index');
 })->name('main-dashboard');
+
+//Route::get('/', 'ContactController@showHome');
+//
+//Route::get('/contacts', 'ContactController@showNewContact');
+//
+//Route::post('/contacts', 'ContactController@addContact');

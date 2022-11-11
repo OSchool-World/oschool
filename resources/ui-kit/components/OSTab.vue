@@ -5,6 +5,9 @@
                 <li v-for="(tab, index) in tabs" @click="selectTab(tab)" :class="{active: tab == activeTab}">
                     {{ tab.title ? tab.title : 'tab' + (index+1) }}
                 </li>
+                <li v-if="clickAddButton" @click="clickAddButton">
+                    +
+                </li>
             </ul>
         </div>
 
@@ -19,6 +22,15 @@
 
     export default {
         name: "OSTab",
+        props: {
+            clickAddButton: {
+                type: Function,
+                default: null
+            },
+            value: {
+                type: [String, Number]
+            }
+        },
         components: { OSTabPage },
         data() {
             return {
@@ -29,6 +41,7 @@
         methods: {
             selectTab: function (tab_page) {
                 this.activeTab = tab_page;
+                this.$emit('input', tab_page.id);
             }
         },
         watch: {
@@ -36,15 +49,25 @@
                 this.tabs.forEach(tab => {
                     tab.isActive = (this.activeTab.title == tab.title);
                 });
+            },
+            tabs: function () {
+                if(!this.activeTab && this.tabs.length > 0)
+                    if(this.value) {
+                        var active_tab = this.tabs.find((teb) => {
+                            return teb.id == this.value
+                        });
+
+                        if(active_tab)
+                            this.activeTab = active_tab;
+                        else
+                            this.activeTab = this.tabs[0];
+                    } else {
+                        this.activeTab = this.tabs[0];
+                    }
             }
         },
         created: function () {
             this.tabs = this.$children;
-
-            this.$nextTick(function () {
-                if(this.tabs.length > 0)
-                    this.activeTab = this.tabs[0];
-            })
         }
     }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <os-page>
-        <os-section class="col-9">
+        <os-section class="col-9" caption="کاربران">
             <os-datagrid :data="users" :columns="users_table_columns" :row-dropdown-items="users_table_dropdown_items"></os-datagrid>
         </os-section>
         <os-section class="col-3">

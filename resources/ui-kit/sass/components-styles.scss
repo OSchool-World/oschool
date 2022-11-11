@@ -81,7 +81,7 @@ div.os-input {
         border-radius: $input-height/2;
         padding: 0 5px;
         height: $input-height + 2;
-        min-width: 200px;
+        min-width: 150px;
         background-color: white;
 
         span.icon {
@@ -475,9 +475,14 @@ div.os-listbox {
                 li {
                     padding: 2px 10px;
                     cursor: pointer;
+                    position: relative;
 
                     &:hover {
                         background-color: $grey1;
+
+                        .item-btns {
+                            display: inline-block;
+                        }
                     }
 
                     &.active {
@@ -486,6 +491,10 @@ div.os-listbox {
 
                         span {
                             color: inherit;
+                        }
+
+                        .item-btns {
+                            color: white;
                         }
                     }
 
@@ -502,6 +511,20 @@ div.os-listbox {
 
                     .os-checkbox {
                         padding: 0;
+                    }
+
+                    .item-btns {
+                        display: none;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        font-size: 18px;
+                        margin-left: 6px;
+
+                        * {
+                            color: inherit;
+                        }
                     }
                 }
             }
@@ -571,9 +594,9 @@ div.os-radio {
 
 button.os-btn {
     min-width: 70px;
-    height: 32px;
-    line-height: 30px;
-    border-radius: 16px;
+    height: 38px;
+    line-height: 36px;
+    border-radius: 19px;
     border: none;
     background-color: $primary-color;
     color: white;
@@ -615,6 +638,14 @@ button.os-btn {
         line-height: 20px;
         min-width: 40px;
         font-size: 10px
+    }
+
+    &.no-margin {
+        margin: 0;
+    }
+
+    &.no-min-width {
+        min-width: unset;
     }
 }
 
@@ -1097,6 +1128,7 @@ div.os-datagrid {
         width: 100%;
         font-size: $input-font-size;
         border-collapse: collapse;
+        border: solid 1px #CFD5D9;
 
         tr {
             i.more {

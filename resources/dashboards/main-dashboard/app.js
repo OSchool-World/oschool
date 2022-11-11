@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import axios from 'axios';
 import OSchoolUIKit from '../../ui-kit/index';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 
+Vue.use(VueAxios, axios);
 Vue.use(OSchoolUIKit);
 Vue.use(VueRouter);
 
@@ -10,8 +12,21 @@ Vue.use(VueRouter);
 import routes from './routes';
 import NavigationItems from "./nav-items";
 import LanguageManager from './Tools/LanguageManager';
+// import APIManager from './Tools/APIManager';
 
 //=====================================================
+
+// const plugin = {
+//     install () {
+//         Vue.GET = APIManager.get;
+//         Vue.POST = APIManager.post;
+//         Vue.prototype.$get = APIManager.get;
+//     }
+// };
+//
+// Vue.use(plugin);
+
+axios.defaults.baseURL = 'http://oschool.local/api';
 
 const router = new VueRouter({
     linkActiveClass: 'active',

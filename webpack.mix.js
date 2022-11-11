@@ -13,8 +13,8 @@ const mix = require('laravel-mix');
 
 mix.js('resources/dashboards/main-dashboard/app.js', 'public/js/main-dashboard.js');
 
-mix.sass('resources/ui-kit/sass/styles.scss', 'public/css/oschool-ui-kit.css')
-    .js('resources/ui-kit/oschool-ui-kit-overview.js', 'public/js')
-    .sass('resources/ui-kit/sass/oschool-icons.scss', 'public/css/oschool-icons.css');
+// mix.sass('resources/ui-kit/sass/styles.scss', 'public/css/oschool-ui-kit.css');
+//     .js('resources/ui-kit/oschool-ui-kit-overview.js', 'public/js')
+//     .sass('resources/ui-kit/sass/oschool-icons.scss', 'public/css/oschool-icons.css');
 
 // mix.copy('node_modules/bootstrap/dist/css/bootstrap-grid.css', 'public/css/bootstrap');

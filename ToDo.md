@@ -1,0 +1,15 @@
+- Move User into module:
+	- Middlewares
+	- configs
+	- providers
+- Change default of time, date, language, timrzone, ...
+- Create Commands:
+	- `oschool:make-module`
+	- `oschool:make-controller`
+- Add random_id in classes
+- textarea scroll
+- One item dropdown radius
+- Soft delete
+- Relations
+- Empty listbox
+- User Image
